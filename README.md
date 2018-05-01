@@ -4,7 +4,7 @@
 
 ```
 # Première commande pour installer les librairies.
-npm installl
+npm install
 
 # Deuxième commande pour démarrer le serveur.
 npm start
