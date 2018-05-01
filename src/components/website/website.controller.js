@@ -1,6 +1,9 @@
 const controller = {
-  ping: (req, res) => {
-    res.json("pong")
+  add: (req, res) => {
+    res.render('website_add');
+  },
+  list: (req, res) => {
+    res.render('website_list');
   }
 }
 

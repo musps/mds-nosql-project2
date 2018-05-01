@@ -7,8 +7,11 @@ const routes = require('./routes')
 /**
   * Config.
   */
+app.use(express.static(__dirname + '/../node_modules'))
+app.use('/assets', express.static(__dirname + '/assets'))
 app.set('view engine', 'pug');
 app.set('views', path.join(__dirname, 'views'));
+
 
 routes.config(app)
 
