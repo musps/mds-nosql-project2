@@ -2,3 +2,12 @@ extends template.pug
 
 block content
   <h1 class="display-4">List Website</h1>
+
+  <ul class="list-group">
+    each item in data
+      <li class="list-group-item">
+        p #{item.title}
+        hr
+        p URL : #{item.url} <br> Description : #{item.description}
+      </li>
+  </ul>

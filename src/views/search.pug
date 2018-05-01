@@ -1,0 +1,25 @@
+extends template.pug
+
+block content
+  if target
+    <h1 class="display-4">Result : #{target} - #{count}</h1>
+
+    if target === 'website'
+      <ul class="list-group">
+        each item in data
+          <li class="list-group-item">
+            p #{item.title}
+            hr
+            p URL : #{item.url} <br> Description : #{item.description}
+          </li>
+      </ul>
+
+    if target === 'article'
+      <ul class="list-group">
+        each item in data
+          <li class="list-group-item">
+            p #{item.title}
+            hr
+            p URL : #{item.url} <br> Author : #{item.author} <br> Description : #{item.description}
+          </li>
+      </ul>

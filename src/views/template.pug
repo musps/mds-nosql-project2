@@ -6,11 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <link rel="stylesheet" type="text/css" href="/bootstrap/dist/css/bootstrap.css" />
     <link rel="stylesheet" href="/assets/css/css.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
   <body>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-      <a class="navbar-brand" href="#">Search Engine</a>
+      <a class="navbar-brand" href="/">Search Engine</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -24,10 +25,10 @@
             <a class="nav-link" href="/article/add">Add Article</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/website/list">List Website</a>
+            <a class="nav-link" href="/website">List Website</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/article/list">List Article</a>
+            <a class="nav-link" href="/article">List Article</a>
           </li>
         </ul>
       </div>
@@ -37,24 +38,26 @@
       <h1 class="display-4">Search Engine</h1>
 
       <div class="jumbotron">
-
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="website">
-          <label class="form-check-label" for="website">Website</label>
-        </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="article">
-          <label class="form-check-label" for="article">Article</label>
-        </div>
-
-        <hr>
-
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Search..." aria-describedby="basic-addon2">
-          <div class="input-group-append">
-            <button class="btn btn-outline-secondary" type="button">Go</button>
+        <form method="POST" action="/">
+          <div class="form-check">
+            <input type="radio" name="target" value="website" class="form-check-input" id="website">
+            <label class="form-check-label" for="website">Website</label>
           </div>
-        </div>
+          <div class="form-check">
+            <input type="radio" name="target" value="article" class="form-check-input" id="article">
+            <label class="form-check-label" for="article">Article</label>
+          </div>
+
+          <hr>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" name="query" placeholder="Search..." aria-describedby="basic-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="submit">Go</button>
+            </div>
+          </div>
+
+        </form>
 
       </div>
     </div>
